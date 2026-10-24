@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskPulse · Трекер навчальних проєктів</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-layout">
+    <header class="app-header">
+      <div class="logo">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">TaskPulse</span>
+      </div>
+      <div class="student-meta">
+        <span>👤 Дарина Бондарчук</span>
+        <span class="badge">КН-25</span>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <h1>Керування навчальними завданнями та практичними</h1>
+        <p>Легкий клієнтський трекер завдань із збереженням у LocalStorage та аналітикою дедлайнів.</p>
+      </section>
+
+      <section class="task-form-card">
+        <form id="task-form">
+          <div class="form-row">
+            <input type="text" id="task-title" placeholder="Назва завдання (напр., Практична робота 4)" required>
+            <select id="task-category">
+              <option value="Git & GitHub">Git & GitHub</option>
+              <option value="Веб-розробка">Веб-розробка</option>
+              <option value="Бази знань">Бази знань</option>
+              <option value="Інше">Інше</option>
+            </select>
+            <input type="date" id="task-deadline" required>
+            <button type="submit" class="btn btn-primary">+ Додати</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="stats-bar">
+        <div class="stat-item">Всього: <strong id="total-count">0</strong></div>
+        <div class="stat-item">В процесі: <strong id="pending-count">0</strong></div>
+        <div class="stat-item">Виконано: <strong id="completed-count">0</strong></div>
+      </section>
+
+      <section class="tasks-section">
+        <h2>Список завдань</h2>
+        <div id="tasks-list" class="tasks-list">
+          <!-- Tasks injected via JS -->
+        </div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <p>© 2026 TaskPulse · Практична робота 3 · Бондарчук Дарина (КН-25)</p>
+    </footer>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
